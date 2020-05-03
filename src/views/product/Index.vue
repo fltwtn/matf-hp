@@ -16,8 +16,8 @@ export default {
     LoadSections([
       "hero-alt",
       "about-our-product",
+      "iot-device",
       "soja-mobile",
-      "theme-features",
       "info",
     ]),
   ],

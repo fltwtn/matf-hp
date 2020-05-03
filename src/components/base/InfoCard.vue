@@ -25,7 +25,7 @@
           </base-body>
         </v-col>
 
-        <v-col v-if="callout" cols="2">
+        <v-col v-if="callout" cols="2" class="mr-1">
           <div
             class="display-3 grey--text text--lighten-4 font-weight-bold pr-8"
             v-text="callout"

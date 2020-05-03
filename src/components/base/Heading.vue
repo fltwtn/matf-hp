@@ -44,7 +44,7 @@ export default {
     },
     size: {
       type: String,
-      default: "display-2",
+      default: "display-1",
     },
     space: {
       type: [Number, String],
@@ -52,7 +52,7 @@ export default {
     },
     mobileSize: {
       type: String,
-      default: "display-1",
+      default: "headline",
     },
     mobileBreakPoint: {
       type: [Number, String],

@@ -3,7 +3,7 @@
     :is="tag"
     :class="classes"
     :style="styles"
-    class="base-body body-1"
+    class="base-body body-3"
     v-bind="$attrs"
     v-on="$listeners"
   >
@@ -42,11 +42,14 @@ export default {
       default: "p",
     },
     text: String,
+    fontSize: {
+      type: Number,
+      default: 60,
+    },
   },
 
   computed: {
     classes() {
-      console.log(this.theme.isDark);
       return [
         "grey--text",
         this.theme.isDark ? "text--lighten-1" : "text--darken-1",

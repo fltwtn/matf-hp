@@ -7,10 +7,22 @@
     </v-container>
     <v-container>
       <v-row justify="center">
-        <v-col v-for="(feature, i) in features" :key="i" cols="12" md="12">
-          <base-image-card v-bind="feature" align="left" horizontal>
-          </base-image-card>
+        <v-col v-for="(feature, i) in features" :key="i" cols="12" md="4">
+          <base-image-card v-bind="feature" align="left"> </base-image-card>
         </v-col>
+      </v-row>
+      <v-row justify="center" class="my-3">
+        <base-title :title="title" class="text-uppercase mb-5" space="3" />
+      </v-row>
+      <v-row justify="center" class="my-3">
+        <v-container>
+          <base-img
+            :src="require(`@/assets/coming_soon.png`)"
+            tile
+            class="mr-2 mb-4"
+            contain
+          />
+        </v-container>
       </v-row>
     </v-container>
   </base-section>
@@ -27,12 +39,14 @@ export default {
         text:
           "SOJA! Mobileにはスマートフォンに最適化されたフレームワークを採用しており、管理者や作業者が直感的に操作できるUIとなっています。また、Android / iOS どちらにも対応可能です（リリース v0.1.0はAndroidのみ）。",
         imgFile: "soja_mobile.png",
+        type: "product",
       },
       {
         title: "IoTデバイスとの連携",
         text:
           "IoTデバイスと連携することで、圃場のモニタリングが可能になります。例えば水位センサーと連携することにより、水田の水位が危険域に達する前にアラートを飛ばしたり、水位の時系列での変化を画面に表示できます。",
         imgFile: "soja_mobile.png",
+        type: "product",
       },
       {
         title: "最新の研究に基づくユニークな機能",
@@ -48,8 +62,10 @@ export default {
           },
         ],
         imgFile: "soja_mobile.png",
+        type: "product",
       },
     ],
+    title: "紹介動画",
   }),
 };
 </script>

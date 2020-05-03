@@ -3,7 +3,7 @@
     <v-container>
       <v-row justify="center">
         <v-col>
-          <base-section-heading title="Product Lineup">
+          <base-section-heading title="プロダクト紹介">
             MATFでは研究から得られた知見を元に、IoTなどの情報通信技術を利用したプロダクト開発を行なっています。
             これらのプロダクトから取得された実データは研究へフィードバックされ、新たなテーマを開拓します。
             このサイクルを高速で回すことにより、農学研究の社会実装を加速していきます。

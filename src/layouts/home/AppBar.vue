@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar id="home-app-bar" app color="white" elevation="1" height="80">
+    <v-app-bar id="home-app-bar" app color="white" elevation="1" height="100">
       <!-- <base-img
         :src="require('@/assets/logo.svg')"
         class="mr-3 hidden-xs-only"
@@ -13,14 +13,14 @@
         :src="require('@/assets/matf_logo.svg')"
         class="mt-3"
         contain
-        max-width="300"
+        max-width="320"
         width="100%"
       />
 
       <v-spacer />
 
       <div>
-        <v-tabs class="hidden-sm-and-down" optional>
+        <v-tabs class="hidden-sm-and-down">
           <v-tab
             v-for="(name, i) in items"
             :key="i"
@@ -54,7 +54,7 @@ export default {
 
   data: () => ({
     drawer: null,
-    items: ["Home", "About", "Research", "Product", "Contact"],
+    items: ["Home", "About", "Research", "Product"],
   }),
 };
 </script>

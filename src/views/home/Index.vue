@@ -15,14 +15,10 @@ export default {
   mixins: [
     LoadSections([
       "hero",
-      "theme-features",
-      "features",
-      "contact-us",
-      "affiliates",
-      "social-media",
-      "keep-in-touch",
-      "newsletter",
-      "pro-features",
+      "home-blank",
+      "home-mission",
+      "home-research",
+      "home-product",
       "info",
     ]),
   ],

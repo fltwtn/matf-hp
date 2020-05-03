@@ -1,13 +1,28 @@
 <template>
-  <div :class="classes" class="pt-2">
-    <base-img
-      v-if="imgFile"
-      :src="require(`@/assets/${imgFile}`)"
-      max-width="100"
-      tile
-      class="mr-2"
-      contain
-    />
+  <div :class="classes" class="pt-2 ml-2 mr-2">
+    <v-container v-if="type == 'product'">
+      <v-row justify="center">
+        <base-img
+          v-if="imgFile"
+          :src="require(`@/assets/${imgFile}`)"
+          max-width="100"
+          tile
+          class="mr-2 mb-4"
+          contain
+        />
+      </v-row>
+    </v-container>
+
+    <div v-if="type == 'research'">
+      <base-img
+        v-if="imgFile"
+        :src="require(`@/assets/${imgFile}`)"
+        max-width="100"
+        tile
+        class="mr-2 mb-4"
+        contain
+      />
+    </div>
 
     <div :class="horizontal && title && 'ml-5'">
       <base-title :title="title" class="text-uppercase mb-5" space="3" />
@@ -21,7 +36,7 @@
         <slot />
       </base-body>
 
-      <ul style="text-align: left; color: #757575">
+      <ul style="text-align: left; color: #757575; font-size: 15px">
         <li v-for="item in items" :key="item.id">{{ item.text }}</li>
       </ul>
     </div>
@@ -56,6 +71,7 @@ export default {
     title: String,
     items: Array,
     imgFile: String,
+    type: String,
   },
 
   computed: {

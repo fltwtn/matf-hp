@@ -31,7 +31,10 @@ export default {
 
   computed: {
     classes() {
-      return [...Heading.computed.classes.call(this), "grey--text"];
+      return [
+        ...Heading.computed.classes.call(this),
+        "grey--text text--lighten-3",
+      ];
     },
   },
 };
